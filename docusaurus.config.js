@@ -2,13 +2,13 @@
 module.exports = {
   title: 'My Site',
   tagline: 'Dinosaurs are cool',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
+  url: 'https://tianhaoz95-notebooks.github.io/workstation-setup',
+  baseUrl: '/workstation-setup/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'tianhaoz95-notebooks', // Usually your GitHub org/user name.
+  projectName: 'workstation-setup', // Usually your repo name.
   themeConfig: {
     navbar: {
       title: 'My Site',
@@ -23,9 +23,9 @@ module.exports = {
           position: 'left',
           label: 'Tutorial',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        { to: '/blog', label: 'Blog', position: 'left' },
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/tianhaoz95-notebooks/workstation-setup',
           label: 'GitHub',
           position: 'right',
         },
