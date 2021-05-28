@@ -1,25 +1,25 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Workstation Setup Notes',
+  tagline: 'Make setting up new workstation a well defined process',
   url: 'https://tianhaoz95-notebooks.github.io/workstation-setup',
   baseUrl: '/workstation-setup/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'tianhaoz95-notebooks', // Usually your GitHub org/user name.
-  projectName: 'workstation-setup', // Usually your repo name.
+  organizationName: 'tianhaoz95-notebooks',
+  projectName: 'workstation-setup',
   themeConfig: {
     navbar: {
-      title: 'My Site',
+      title: 'Workstation Setup Notes',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Workstation Setup Notes Logo',
         src: 'img/logo.svg',
       },
       items: [
         {
           type: 'doc',
-          docId: 'intro',
+          docId: 'index',
           position: 'left',
           label: 'Tutorial',
         },
