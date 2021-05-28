@@ -6,7 +6,7 @@ module.exports = {
   baseUrl: '/workstation-setup/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/branding/favicon.ico',
   organizationName: 'tianhaoz95-notebooks',
   projectName: 'workstation-setup',
   themeConfig: {
@@ -14,7 +14,7 @@ module.exports = {
       title: 'Workstation Setup Notes',
       logo: {
         alt: 'Workstation Setup Notes Logo',
-        src: 'img/logo.svg',
+        src: 'img/branding/logo.png',
       },
       items: [
         {
@@ -39,7 +39,7 @@ module.exports = {
           items: [
             {
               label: 'Tutorial',
-              to: '/docs/intro',
+              to: '/docs/index',
             },
           ],
         },
@@ -69,12 +69,12 @@ module.exports = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/tianhaoz95-notebooks/workstation-setup',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Tianhao Zhou. Built with Docusaurus.`,
     },
   },
   presets: [
@@ -85,13 +85,13 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
+            'https://github.com/tianhaoz95-notebooks/workstation-setup/edit/master/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
+            'https://github.com/tianhaoz95-notebooks/workstation-setup/edit/master/blog/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
