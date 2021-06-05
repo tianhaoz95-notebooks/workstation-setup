@@ -32,3 +32,7 @@ Here are some OS options to consider:
 :::tip
 I personally use **Linux Mint** because I value stability over other factors.
 :::
+
+## VirtualBox
+
+[Instructions for installing guest additions](https://linuxize.com/post/how-to-install-virtualbox-guest-additions-in-ubuntu/)
