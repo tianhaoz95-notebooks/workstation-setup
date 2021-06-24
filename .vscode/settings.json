@@ -12,6 +12,15 @@
         "Zorin",
         "devl",
         "lsusb",
+        "tianhaoz",
+        "userdel",
+        "usermod",
         "wifi"
+    ],
+    "workbench.colorTheme": "GitHub Light Default",
+    "workbench.preferredDarkColorTheme": "GitHub Dark Default",
+    "workbench.preferredLightColorTheme": "GitHub Light Default",
+    "editor.rulers": [
+        80,
     ]
 }

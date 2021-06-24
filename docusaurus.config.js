@@ -68,6 +68,9 @@ module.exports = {
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Tianhao Zhou. Built with Docusaurus.`,
     },
+    prism: {
+      additionalLanguages: [],
+    },
   },
   presets: [
     [

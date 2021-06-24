@@ -4,10 +4,50 @@ sidebar_position: 3
 
 # Ubuntu Server Setup
 
-## Add user
+## User
 
-<!-- see https://linuxize.com/post/how-to-create-users-in-linux-using-the-useradd-command/ for how to add linux users -->
-<!-- see https://www.godaddy.com/help/remove-a-linux-user-19158 for command to delete a linux user -->
+### Add users
+
+To add a Linux user with **home directory** and **login shell (bash)**, use the
+following command:
+
+```bash
+sudo useradd -m -s /usr/bin/bash "$NEW_USERNAME"
+```
+
+:::note
+For more options, see
+[this post](https://linuxize.com/post/how-to-create-users-in-linux-using-the-useradd-command).
+:::
+
+### Delete users
+
+To remove a Linux user, use the following command:
+
+```bash
+sudo userdel "$NEW_USERNAME"
+```
+
+:::note
+For more options, see
+[this doc](https://www.godaddy.com/help/remove-a-linux-user-19158).
+:::
+
+### Permissions
+
+For any Linux developer account to make sense, it need as least the following:
+
+```bash
+sudo usermod -aG \
+    sudo docker \
+    $USER
+```
+
+:::note
+Alternatively, we can use the admin account to setup all the `sudo` related
+tools and remove other users from `sudo` which is safer, but can cause
+inconveniences.
+:::
 
 ## Driver
 
@@ -35,7 +75,7 @@ sidebar_position: 3
 
 Here is a sample configuration file:
 
-```
+```log
 Host example
     HostName 192.168.1.10
     User example-user
@@ -50,11 +90,14 @@ Host example
 
 #### Device not connecting
 
-When Android devices are connected but `adb devices` cannot find the devices, it's because the `adb` server doesn't have sufficient permission to access usb devices.
+When Android devices are connected but `adb devices` cannot find the devices,
+it's because the `adb` server doesn't have sufficient permission to access usb
+devices.
 
 ##### Short term solution
 
-For short term solution, we can just restart the `adb` server with `sudo` privilege:
+For short term solution, we can just restart the `adb` server with `sudo`
+privilege:
 
 ```bash
 sudo adb kill-server
@@ -62,12 +105,14 @@ sudo adb start-server
 ```
 
 :::note
-For more details, please see [this answer](https://askubuntu.com/questions/863587/adb-device-list-doesnt-show-phone).
+For more details, please see
+[this answer](https://askubuntu.com/questions/863587/adb-device-list-doesnt-show-phone).
 :::
 
 ### Long term solution
 
-For long term solution, we need to add the correct user as the `usb` device owner.
+For long term solution, we need to add the correct user as the `usb` device
+owner.
 
 First, we need to find the vendor ID and product ID of the Android device with:
 
@@ -81,7 +126,8 @@ Bus 001 Device 002: ID 046d:c52b Logitech, Inc. Unifying Receiver
 Here `046d` is the vendor ID and `c52b` is the product ID.
 :::
 
-Then we need to add the ownership config as `/etc/udev/rules.d/51-android.rules` which contains something like:
+Then we need to add the ownership config as `/etc/udev/rules.d/51-android.rules`
+which contains something like:
 
 ```bash
 # adb for Moto E devl device
@@ -93,5 +139,6 @@ Here we need to replace `idVendor`, `idProduct` and `username`.
 :::
 
 :::note
-For more details, see this [answer](https://askubuntu.com/questions/213874/how-to-configure-adb-access-for-android-devices).
+For more details, see this
+[answer](https://askubuntu.com/questions/213874/how-to-configure-adb-access-for-android-devices).
 :::
