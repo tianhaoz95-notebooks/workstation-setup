@@ -22,5 +22,7 @@
     "workbench.preferredLightColorTheme": "GitHub Light Default",
     "editor.rulers": [
         80,
-    ]
+    ],
+    "git.autofetch": true,
+    "git.autofetchPeriod": 60
 }
