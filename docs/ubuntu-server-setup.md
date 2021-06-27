@@ -4,6 +4,17 @@ sidebar_position: 3
 
 # Ubuntu Server Setup
 
+## Disable auto sleep
+
+```bash
+sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
+```
+
+:::note
+For more details, see
+[this post](https://www.unixtutorial.org/disable-sleep-on-ubuntu-server/).
+:::
+
 ## Driver
 
 <!-- see https://docs.nvidia.com/datacenter/tesla/tesla-installation-notes/index.html#ubuntu-lts for how to install Nvidia driver -->
@@ -65,6 +76,10 @@ following command:
 sudo useradd -m -s /usr/bin/bash "$NEW_USERNAME"
 ```
 
+```bash
+sudo passwd "$NEW_USERNAME"
+```
+
 :::note
 For more options, see
 [this post](https://linuxize.com/post/how-to-create-users-in-linux-using-the-useradd-command).
@@ -88,9 +103,8 @@ For more options, see
 For any Linux developer account to make sense, it need as least the following:
 
 ```bash
-sudo usermod -aG \
-    sudo docker \
-    $USER
+sudo usermod -aG docker "$NEW_USERNAME"
+sudo usermod -aG sudo "$NEW_USERNAME"
 ```
 
 :::note
@@ -103,10 +117,41 @@ inconveniences.
 
 <!-- see https://bytexd.com/install-chrome-remote-desktop-headless/ for how to setup headless CRD -->
 
+Here is an
+[official example](https://cloud.google.com/architecture/chrome-desktop-remote-on-compute-engine#xfce)
+for setting up CRD on GCloud VM.
+
+Here is an
+[official example](https://support.google.com/chrome/answer/1649523#zippy=%2Cuse-chrome-remote-desktop-on-linux)
+for setting up CRD for Linux workstation.
+
+## Essential apps
+
+### VS code
+
+Visit <https://code.visualstudio.com>.
+
+### Chrome
+
+```bash
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+```
+
+:::note
+Check out
+[this post](https://itsfoss.com/install-chrome-ubuntu/#install-chrome-terminal)
+for more details.
+:::
+
 ## Drive
 
 <!-- see https://www.cyberciti.biz/faq/mount-drive-from-command-line-ubuntu-linux/ for how to mount drive from command line -->
 <!-- see https://unix.stackexchange.com/questions/315063/mount-wrong-fs-type-bad-option-bad-superblock for wrong fs type error -->
+
+:::note
+This is not needed for Ubuntu server since you can set up a Raid 0 during
+installation which works better.
+:::
 
 ## Network
 
