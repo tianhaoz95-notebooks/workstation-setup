@@ -33,6 +33,27 @@ Check out
 [the official documentation for more details](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker) for more details.
 :::
 
+## Desktop environment
+
+Install Xfce:
+
+```bash
+sudo DEBIAN_FRONTEND=noninteractive \
+    apt install --assume-yes xfce4 desktop-base
+```
+
+Install Cinnamon:
+
+```bash
+sudo DEBIAN_FRONTEND=noninteractive \
+    apt install --assume-yes cinnamon-core desktop-base
+```
+
+:::note
+For details, see the
+[official CRD configure example](https://cloud.google.com/architecture/chrome-desktop-remote-on-compute-engine#cinnamon).
+:::
+
 ## User
 
 ### Add users
@@ -76,27 +97,6 @@ sudo usermod -aG \
 Alternatively, we can use the admin account to setup all the `sudo` related
 tools and remove other users from `sudo` which is safer, but can cause
 inconveniences.
-:::
-
-## Desktop environment
-
-Install Xfce:
-
-```bash
-sudo DEBIAN_FRONTEND=noninteractive \
-    apt install --assume-yes xfce4 desktop-base
-```
-
-Install Cinnamon:
-
-```bash
-sudo DEBIAN_FRONTEND=noninteractive \
-    apt install --assume-yes cinnamon-core desktop-base
-```
-
-:::note
-For details, see the
-[official CRD configure example](https://cloud.google.com/architecture/chrome-desktop-remote-on-compute-engin).
 :::
 
 ## Remote Access
