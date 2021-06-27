@@ -53,6 +53,12 @@ inconveniences.
 
 <!-- see https://docs.nvidia.com/datacenter/tesla/tesla-installation-notes/index.html#ubuntu-lts for how to install Nvidia driver -->
 
+:::note
+Check out
+[the Nvidia installation docs](https://docs.nvidia.com/datacenter/tesla/tesla-installation-notes/index.html#ubuntu-lts)
+for how to install Nvidia drivers.
+:::
+
 ## Desktop environment
 
 <!-- see https://www.howtogeek.com/107368/how-to-install-the-lightweight-lxde-desktop-on-ubuntu/ for how to install LXDE -->
