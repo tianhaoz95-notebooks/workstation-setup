@@ -61,7 +61,24 @@ for how to install Nvidia drivers.
 
 ## Desktop environment
 
-<!-- see https://www.howtogeek.com/107368/how-to-install-the-lightweight-lxde-desktop-on-ubuntu/ for how to install LXDE -->
+Install Xfce:
+
+```bash
+sudo DEBIAN_FRONTEND=noninteractive \
+    apt install --assume-yes xfce4 desktop-base
+```
+
+Install Cinnamon:
+
+```bash
+sudo DEBIAN_FRONTEND=noninteractive \
+    apt install --assume-yes cinnamon-core desktop-base
+```
+
+:::note
+For details, see the
+[official CRD configure example](https://cloud.google.com/architecture/chrome-desktop-remote-on-compute-engin).
+:::
 
 ## Remote Access
 
