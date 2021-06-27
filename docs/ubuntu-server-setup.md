@@ -4,6 +4,35 @@ sidebar_position: 3
 
 # Ubuntu Server Setup
 
+## Driver
+
+<!-- see https://docs.nvidia.com/datacenter/tesla/tesla-installation-notes/index.html#ubuntu-lts for how to install Nvidia driver -->
+
+:::note
+Check out
+[the Nvidia installation docs](https://docs.nvidia.com/datacenter/tesla/tesla-installation-notes/index.html#ubuntu-lts)
+for how to install Nvidia drivers.
+:::
+
+## Docker
+
+:::note
+Check out
+[the official documentation](https://docs.docker.com/engine/install/ubuntu/)
+for instructions.
+
+Also, don't forget to follow the
+[post-installation instructions](https://docs.docker.com/engine/install/linux-postinstall/)
+after docker installation.
+:::
+
+## Driver docker support
+
+:::note
+Check out
+[the official documentation for more details](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker) for more details.
+:::
+
 ## User
 
 ### Add users
@@ -47,16 +76,6 @@ sudo usermod -aG \
 Alternatively, we can use the admin account to setup all the `sudo` related
 tools and remove other users from `sudo` which is safer, but can cause
 inconveniences.
-:::
-
-## Driver
-
-<!-- see https://docs.nvidia.com/datacenter/tesla/tesla-installation-notes/index.html#ubuntu-lts for how to install Nvidia driver -->
-
-:::note
-Check out
-[the Nvidia installation docs](https://docs.nvidia.com/datacenter/tesla/tesla-installation-notes/index.html#ubuntu-lts)
-for how to install Nvidia drivers.
 :::
 
 ## Desktop environment
