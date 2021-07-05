@@ -8,11 +8,19 @@
         "Moto",
         "Spotify",
         "Tianhao",
+        "WEBPASSWORD",
         "Zhou",
         "Zorin",
         "devl",
+        "dnsmasq",
+        "ghcr",
+        "homeassistant",
+        "localtime",
         "lsusb",
         "noninteractive",
+        "pihole",
+        "portainer",
+        "raspberrypi",
         "tianhaoz",
         "userdel",
         "usermod",
@@ -25,5 +33,6 @@
         80,
     ],
     "git.autofetch": true,
-    "git.autofetchPeriod": 60
+    "git.autofetchPeriod": 60,
+    "editor.tabSize": 2
 }

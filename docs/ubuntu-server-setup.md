@@ -131,6 +131,23 @@ for setting up CRD for Linux workstation.
 
 Visit <https://code.visualstudio.com>.
 
+
+### Portainer
+
+```yml
+version: '3'
+services:
+ portainer_agent:
+ container_name: portainer_agent
+  image: portainer/agent
+  ports:
+   - '9001:9001'
+  restart: always
+  volumes:
+   - '/var/run/docker.sock:/var/run/docker.sock'
+   - '/var/lib/docker/volumes:/var/lib/docker/volumes'
+```
+
 ### Chrome
 
 ```bash
