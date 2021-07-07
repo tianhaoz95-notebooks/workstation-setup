@@ -49,6 +49,33 @@ services:
       - './portainer_data:/data'
 ```
 
+## ArozOS
+
+```dockerfile
+FROM golang:buster
+RUN apt -y update && apt -y install git
+RUN git clone https://github.com/tobychui/arozos /arozos
+WORKDIR /arozos/src
+RUN go build
+CMD ./arozos -port 80
+```
+
+```yml
+version: "3"
+services:
+  arozos:
+    container_name: arozos
+    build: .
+    ports:
+      - "7888:80"
+      - "2121:21"
+    restart: always
+```
+
+:::note
+For ArozOS project details, see <https://github.com/tobychui/arozos>.
+:::
+
 ## Home assistant
 
 ```yml
