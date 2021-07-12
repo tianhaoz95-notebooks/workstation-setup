@@ -80,13 +80,12 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/tianhaoz95-notebooks/workstation-setup/edit/master/',
+            'https://github.com/tianhaoz95-notebooks/workstation-setup/edit/main/',
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
           editUrl:
-            'https://github.com/tianhaoz95-notebooks/workstation-setup/edit/master/blog/',
+            'https://github.com/tianhaoz95-notebooks/workstation-setup/edit/main/blog/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
