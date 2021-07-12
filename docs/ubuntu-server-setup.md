@@ -25,6 +25,12 @@ Check out
 for how to install Nvidia drivers.
 :::
 
+## WoL
+
+For checking the current WoL status, see instructions in https://help.ubuntu.com/community/WakeOnLan
+
+For setting up on-boot service, see https://www.techrepublic.com/article/how-to-enable-wake-on-lan-in-ubuntu-server-18-04/
+
 ## Docker
 
 :::note
