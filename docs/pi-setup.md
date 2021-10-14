@@ -4,6 +4,10 @@ sidebar_position: 4
 
 # Pi Setup
 
+## Code server
+
+See <https://www.digitalocean.com/community/tutorials/how-to-set-up-the-code-server-cloud-ide-platform-on-ubuntu-20-04> and <https://coder.com/docs/code-server/latest/guide>
+
 ## Pi hole
 
 ```yml
