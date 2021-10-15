@@ -15,7 +15,8 @@ After=nginx.service
 
 [Service]
 Type=simple
-ExecStart=/home/pi/.yarn/bin/code-server --config /home/pi/.config/code-server/config.yaml --cert /home/pi/.local/share/code-server/localhost.crt --cert-key /home/pi/.local/share/code-server/localhost.key
+User=pi
+ExecStart=/home/pi/.yarn/bin/code-server --config /home/pi/.config/code-server/config.yaml
 Restart=always
 
 [Install]
@@ -23,10 +24,10 @@ WantedBy=multi-user.target
 ```
 
 ```yml
-bind-addr: 0.0.0.0:6443
+bind-addr: x.x.x.x:6443
 auth: password
 password: awesome_passwd
-cert: true
+cert: false
 ```
 
 ## Pi hole
@@ -44,12 +45,12 @@ services:
       - "67:67/udp"
       - "80:80/tcp"
     environment:
-      TZ: 'America/Los_Angeles'
-      WEBPASSWORD: 'CUSTOMIZE_HERE'
+      TZ: "America/Los_Angeles"
+      WEBPASSWORD: "CUSTOMIZE_HERE"
     # Volumes store your data between container upgrades
     volumes:
-      - './etc-pihole/:/etc/pihole/'
-      - './etc-dnsmasq.d/:/etc/dnsmasq.d/'
+      - "./etc-pihole/:/etc/pihole/"
+      - "./etc-dnsmasq.d/:/etc/dnsmasq.d/"
     # Recommended but not required (DHCP needs NET_ADMIN)
     #   https://github.com/pi-hole/docker-pi-hole#note-on-capabilities
     cap_add:
@@ -60,18 +61,18 @@ services:
 ## Portainer
 
 ```yml
-version: '3'
+version: "3"
 services:
   portainer:
     container_name: portainer
     image: portainer/portainer-ce
     ports:
-      - '8000:8000'
-      - '9000:9000'
+      - "8000:8000"
+      - "9000:9000"
     restart: always
     volumes:
-      - '/var/run/docker.sock:/var/run/docker.sock'
-      - './portainer_data:/data'
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "./portainer_data:/data"
 ```
 
 ## ArozOS
@@ -104,7 +105,7 @@ For ArozOS project details, see <https://github.com/tobychui/arozos>.
 ## Home assistant
 
 ```yml
-version: '3'
+version: "3"
 services:
   homeassistant:
     container_name: homeassistant
