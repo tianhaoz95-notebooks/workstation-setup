@@ -13,7 +13,6 @@ sudo apt install samba samba-common
 Update `/etc/samba/smb.conf` by appending:
 
 ```bash
-# NAS settings
 [Projects]
 path = /mnt/Share/Projects
 writeable = yes
