@@ -4,6 +4,24 @@ sidebar_position: 4
 
 # Pi Setup
 
+## NAS
+
+```bash
+sudo apt install samba samba-common
+```
+
+Update `/etc/samba/smb.conf` by appending:
+
+```bash
+# NAS settings
+[Projects]
+path = /mnt/Share/Projects
+writeable = yes
+create mask = 0775
+directory mask = 0775
+public=no
+```
+
 ## Code server
 
 See <https://www.digitalocean.com/community/tutorials/how-to-set-up-the-code-server-cloud-ide-platform-on-ubuntu-20-04> and <https://coder.com/docs/code-server/latest/guide>
