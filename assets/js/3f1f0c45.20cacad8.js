@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkworkstation_setup=self.webpackChunkworkstation_setup||[]).push([[612],{1600:function(t){t.exports=JSON.parse('{"permalink":"/workstation-setup/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"previousPage":null,"nextPage":null,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

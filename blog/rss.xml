@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Workstation Setup Notes Blog</title>
+        <link>https://tianhaoz95-notebooks.github.io/workstation-setup/workstation-setup/blog</link>
+        <description>Workstation Setup Notes Blog</description>
+        <lastBuildDate>Fri, 28 May 2021 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[Welcome]]></title>
+            <link>https://tianhaoz95-notebooks.github.io/workstation-setup/workstation-setup/blog/welcome</link>
+            <guid>welcome</guid>
+            <pubDate>Fri, 28 May 2021 00:00:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>
