@@ -21,7 +21,7 @@
     "clsx": "^2.1.1",
     "file-loader": "^6.2.0",
     "react": "^19.1.1",
-    "react-dom": "^19.2.1",
+    "react-dom": "^19.2.3",
     "url-loader": "^4.1.1"
   },
   "browserslist": {
